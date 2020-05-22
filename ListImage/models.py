@@ -11,3 +11,13 @@ class Post(models.Model):
         blank = True,
         null = True,
     )
+
+class PostMask(models.Model):
+    title = models.TextField(blank=True, null=True)
+    image = ProcessedImageField(
+        upload_to = 'static/images/masks',
+        format = 'JPEG',
+        options = {'quality': 100},
+        blank = True,
+        null = True,
+    )

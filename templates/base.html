@@ -1,0 +1,33 @@
+  
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mask him</title>
+        <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    </head>
+    <body>
+
+        {% load static %}
+        {#{% include 'header.html' %}#}
+        
+        <div class="content-wrapper">
+            <div class="container">
+                {% block content %}
+                {% endblock content%}
+            </div>
+        </div>
+
+        <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.poptrox.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/skel.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/util.js' %}"></script>
+
+        {% block extrascript %}
+        {% endblock %}
+
+    </body>
+</html>

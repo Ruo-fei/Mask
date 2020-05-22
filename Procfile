@@ -1,0 +1,1 @@
+web: gunicorn MASKTRUMP.wsgi --log-file -

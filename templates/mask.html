@@ -1,1 +1,14 @@
-Hello Mask!
+
+
+<div class="cards-listing">
+    {% for post in object_list %}
+        <div class="row">
+            <div class="card view-update {{ post.id }}">
+                <a href="{% url 'mask_detail' post.id %}">
+                    <img src="/{{ post.image }}" width=300>
+                </a>
+            </div>
+        </div>   
+    {% endfor %}
+
+</div>
